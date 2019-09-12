@@ -89,6 +89,11 @@ module.exports = {
         }
       }],
       include: path.join(__dirname, 'assets')
+    }, {
+      test: /\.(eot|otf|webp|ttf|woff|woff2)$/,
+      use: [{
+        loader: 'url-loader'
+      }]
     }]
   }
 };
