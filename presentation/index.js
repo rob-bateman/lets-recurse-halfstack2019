@@ -54,13 +54,30 @@ const gutter = '25px';
 const images = {
   droste: require('../assets/droste_effect.gif'),
   nyan: require('../assets/nyancat.gif'),
-  infinite_plane: require('../assets/videoblocks-retro-infinite-plane.png')
+  infinite_plane: require('../assets/videoblocks-retro-infinite-plane.png'),
+  mario: require('../assets/mario-emerge.gif'),
+  dice: require('../assets/two_red_dice_01-svg.png')
 };
+
+const fullScreenSlide = {
+  position: 'relative',
+  height: '100%',
+  width: '100%'
+}
+
+const iframeStyle = {
+  border: 'none',
+  width: '100%',
+  height: '100%',
+  position: 'absolute',
+  top: 0,
+  left: 0
+}
 
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["fade"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["fade"]} transitionDuration={500} theme={theme} contentWidth={1280}>
         <Slide bgDarken='0.7' bgImage={images.droste}>
           <Notes>
            <h4>Introduction</h4>
@@ -79,13 +96,46 @@ export default class Presentation extends React.Component {
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
             showLineNumbers={false}
             transition={[]}
-            lang="js"
+            lang="typescript"
             code={require("raw-loader!../assets/Basic.ts")}
             ranges={[
               { loc: [0, 572], title: "Basic" }
             ]}/>
+        <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
+            showLineNumbers={false}
+            transition={[]}
+            lang="typescript"
+            code={require("raw-loader!../assets/Javascript.ts")}
+            ranges={[
+              { loc: [0, 572], title: "Javascript" }
+            ]}/>
+        <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
+            showLineNumbers={false}
+            transition={[]}
+            lang="typescript"
+            code={require("raw-loader!../assets/Recursion.ts")}
+            ranges={[
+              { loc: [0, 572], title: "Recursion" }
+            ]}/>
+        <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
+            showLineNumbers={false}
+            transition={[]}
+            lang="typescript"
+            code={require("raw-loader!../assets/TimesTable.ts")}
+            ranges={[
+              { loc: [0, 572], title: "Times Table" }
+            ]}/>
+        <Slide bgDarken='0.3' bgImage={images.mario}>
+          <Heading top size={1}>Emergence!</Heading>
+        </Slide>
+        {/* <Slide style={fullScreenSlide}>
+          <iframe src='awayjs-examples-bin/Basic_View.html' style={iframeStyle}></iframe>
+        </Slide> */}
         <Slide bgDarken='0.7' bgImage={images.infinite_plane} >
-          <Heading size={1}>Basic</Heading>
+          <Heading size={1}>Random Numbers</Heading>
+          <Layout>
+            <Image src={images.dice} height="300px"/>
+          </Layout>
         </Slide>
         {/* <Slide bgImage={images.showreel2}>
         </Slide>
