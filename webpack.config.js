@@ -75,7 +75,8 @@ module.exports = {
         loader: 'url-loader',
 
         options: {
-          mimetype: 'image/gif'
+          mimetype: 'image/gif',
+          limit: 8192
         }
       }],
       include: path.join(__dirname, 'assets')
@@ -86,6 +87,17 @@ module.exports = {
 
         options: {
           mimetype: 'image/jpg'
+        }
+      }],
+      include: path.join(__dirname, 'assets')
+    }, {
+      test: /\.mp4$/,
+      use: [{
+        loader: 'url-loader',
+
+        options: {
+          mimetype: 'video/mp4',
+          limit: 8192
         }
       }],
       include: path.join(__dirname, 'assets')
