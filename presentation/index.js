@@ -79,6 +79,7 @@ const images = {
   like_a_dream: require('../assets/Like in a dream - 3D fractal trip - YouTube.mp4'),
   phyllotaxis: require('../assets/Aloe_polyphylla_1.jpg'),
   elevation: require('../assets/maxresdefault.jpg'),
+  collage: require('../assets/collage.jpg'),
   demoscene1: require('../assets/maxresdefault.jpg'),
   demoscene2: require('../assets/maxresdefault.jpg'),
   demoscene3: require('../assets/maxresdefault.jpg'),
@@ -95,10 +96,13 @@ const images = {
   aurullia6: require('../assets/aurullia-6-1440@2x.jpg'),
   planar5: require('../assets/planar-5-1440@2x.jpg'),
   neural_simulation: require('../assets/neural_simulation.png'),
+  c3po_revenge: require('../assets/c3po-revenge.jpg'),
   log_table: require('../assets/log10_section.png'),
+  neuralnetwork: require('../assets/3b1b_neuralnetwork.gif'),
   builder_bot_dials: require('../assets/builder_bot_dials.jpg'),
   how_machines_learn: require('../assets/how_machines_learn.jpg'),
   neural_simulation_video: require('../assets/Neural Network 3D Simulation.mp4'),
+  aijs_logo: require('../assets/aijs-logo.png'),
 };
 
 const fullScreenSlide = {
@@ -298,7 +302,7 @@ export default class Presentation extends React.Component {
           <Heading top size={1}>Phyllotaxic Spirals</Heading>
           <Image src={images.phyllotaxis} height="500px" padding="10px"/>
         </Slide> */}
-        <Slide bgDarken='0.7' bgImage={images.elevation} >
+        <Slide bgDarken='0.5' bgImage={images.elevation} >
           <Notes>
             <h4>Benefit from many supergeek nordic minds</h4>
             <ol>
@@ -308,25 +312,16 @@ export default class Presentation extends React.Component {
           </Notes>
           <Heading size={1}>Demoscene</Heading>
         </Slide>
-        <Slide>
+        <Slide bgImage={images.collage} >
           <Notes>
             <h4>Older work can't get enough of that cyberpunk look</h4>
           </Notes>
-          <Layout>
-            <Image src={images.demoscene1} height="180px"/>
-            <Image src={images.demoscene2} height="180px"/>
-            <Image src={images.demoscene3} height="180px"/>
-          </Layout>
-          <Layout>
-            <Image src={images.demoscene4} height="180px"/>
-            <Image src={images.demoscene5} height="180px"/>
-            <Image src={images.demoscene6} height="180px"/>
-          </Layout>
-          <Layout>
-            <Image src={images.demoscene7} height="180px"/>
-            <Image src={images.demoscene8} height="180px"/>
-            <Image src={images.demoscene9} height="180px"/>
-          </Layout>
+        </Slide>
+        <Slide bgDarken='0.5' bgImage={images.collage} >
+          <Notes>
+            <h4>Older work can't get enough of that cyberpunk look</h4>
+          </Notes>
+          <Heading size={1}>http://www.pouet.net</Heading>
         </Slide>
         {/* <Slide bgDarken='0.7' bgImage={images.infinite_plane} >
           <Heading size={1}>Random Numbers</Heading>
@@ -406,7 +401,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgImage={images.planar5}>
         </Slide>
-        <Slide bgDarken='0.7' bgImage={images.neural_simulation} >
+        <Slide bgDarken='0.5' bgImage={images.c3po_revenge} >
           <Notes>
             <h4>Log tables for computers</h4>
             <ol>
@@ -415,6 +410,12 @@ export default class Presentation extends React.Component {
             </ol>
           </Notes>
           <Heading size={1}>Machine Learning</Heading>
+        </Slide>
+        <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
+          <Notes>
+            <h4>Precalculated values helped speed up calculations</h4>
+          </Notes>
+          <Image src={images.log_table} height="720px" padding="10px" />
         </Slide>
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
             showLineNumbers={false}
@@ -425,15 +426,28 @@ export default class Presentation extends React.Component {
               { loc: [0, 572], title: "Log Rules" }
             ]}>
           <Notes>
-            <h4>What was their deal?</h4>
+            <h4>In order to avoid long division / multiplation, use log tables! (or a calculator)</h4>
           </Notes>
         </CodeSlide>
-        <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
+        <Slide bgImage={images.neuralnetwork}>
           <Notes>
-            <h4>Precalculated values helped speed up calculations</h4>
+            <h4>What do we do when the actual calculation is unknown?</h4>
+            <ol>
+              <li>Set up an initial condition</li>
+              <li>Use recursion to find the optimial solution</li>
+            </ol>
           </Notes>
-          <Image src={images.log_table} height="720px" padding="10px" />
         </Slide>
+        <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
+            showLineNumbers={false}
+            transition={[]}
+            lang="typescript"
+            code={require("raw-loader!../assets/GradientDescent.ts")}
+            ranges={[
+              { loc: [0, 572], title: "Gradient Descent" }
+            ]}>
+
+        </CodeSlide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
             <h4>In machine learning, a neural net is gradually tweaked to improve the outcome</h4>
@@ -454,180 +468,15 @@ export default class Presentation extends React.Component {
           </video>
           <Heading size={3} padding="20px">Neural Network Simulation</Heading>
         </Slide>
-        {/* <Slide bgImage={images.showreel2}>
-        </Slide>
-        <Slide bgImage={images.showreel3}>
-        </Slide>
-        <Slide bgImage={images.showreel4}>
-        </Slide>
-        <Slide bgImage={images.showreel5}>
-        </Slide>
-        <Slide bgImage={images.showreel6}>
-        </Slide>
-        <Slide bgImage={images.showreel7}>
-        </Slide>
-        <Slide bgImage={images.pepperflash}>
+        <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
-            <h4>Sea change</h4>
-            <ol>
-              <li>How do we improve</li>
-              <li>What do we use</li>
-            </ol>
+            <h4></h4>
           </Notes>
-        </Slide>
-        <Slide>
-          <Notes>
-            <h4>The Ronseal of APIs</h4>
-            <ol>
-              <li>Access to the GPU</li>
-              <li>It has the initials GL ffs</li>
-              <li>Speed Speed Speed</li>
-            </ol>
-          </Notes>
-          <Image src={images.webgllogo}/>
-          <Appear>
-            <Image style={inline} src={images.sparkle} height="500px" />
-          </Appear>
-        </Slide>
-        <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Notes>
-            <h4>Favourite job</h4>
-            <ol>
-              <li>Best platform?</li>
-              <li>Best adaption?</li>
-              <li>Best presentation?</li>
-            </ol>
-          </Notes>
-          <Heading size={1}>Conversion</Heading>
-        </Slide>
-        <Slide bgImage={images.typescriptlogo}>
-        </Slide>
-        <Slide>
-          <Image src={images.awayjslogo} height="300px"/>
+          <Image src={images.aijs_logo} height="400px" padding="10px" />
           <Heading size={3} padding="20px">
-            <Link href="https://github.com/awayjs">http://github.com/awayjs</Link>
+            <Link href="https://github.com/rob-bateman/lets-recurse-halfstack2019">https://aijs.rocks</Link>
           </Heading>
         </Slide>
-        <Slide>
-          <Layout>
-            <Link href="../awayjs-examples-bin/AWDSuzanne.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples1} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/Intermediate_AWDViewer.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples2} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/Intermediate_PerelithKnight.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples3} height="180px"/></Link>
-          </Layout>
-          <Layout>
-            <Link href="../awayjs-examples-bin/CubePrimitive.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples4} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/Intermediate_Globe.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples5} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/ObjLoaderMasterChief.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples6} height="180px"/></Link>
-          </Layout>
-          <Layout>
-            <Link href="../awayjs-examples-bin/Basic_Fire.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples7} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/Intermediate_MonsterHeadShading.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples8} height="180px"/></Link>
-            <Link href="../awayjs-examples-bin/Intermediate_ParticleExplosions.html" margin="0px 10px 0px 10px"><Image src={images.awayjsexamples9} height="180px"/></Link>
-          </Layout>
-          <Heading size={3} padding="20px">
-            <Link href="http://awayjs.github.io/awayjs-examples">awayjs.github.io/awayjs-examples</Link>
-          </Heading>
-        </Slide>
-        <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Notes>
-            <h4>New direction</h4>
-            <ol>
-              <li>High-res performance</li>
-              <li>Under-represented</li>
-            </ol>
-          </Notes>
-          <Heading size={1}>Vectors</Heading>
-        </Slide>
-        <Slide bgImage={images.icycle1}>
-          <Notes>
-            <h4>Compilation step</h4>
-            <ol>
-              <li>Code conversion (AS2 -> JS)</li>
-              <li>Shape conversion (Bezier -> vertex buffer</li>
-            </ol>
-          </Notes>
-        </Slide>
-        <Slide bgImage={images.icycle2}>
-        </Slide>
-        <Slide bgImage={images.icycle3}>
-        </Slide>
-        <Slide>
-        <Layout>
-          <Image src={images.dennis} height="500px"/>
-          <Image src={images.dennis_tris} height="500px"/>
-        </Layout>
-        <Heading size={3} padding="20px">
-            <Link href="../awayjs-examples-bin/AWD3ViewerMinimal.html">Tessellations whatcha want</Link>
-        </Heading>
-        </Slide>
-        <Slide bgImage={images.icycle4} align="center flex-end">
-          <Heading size={3} padding="30px">
-            <Link href="../icycle_web_bin/index.html">Icycle 2</Link>
-          </Heading>
-        </Slide>
-        <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Notes>
-            <h4>2D and 3D together</h4>
-            <ol>
-              <li>Universal interactive model</li>
-              <li>Flexibile content arrangement</li>
-            </ol>
-          </Notes>
-          <Heading size={1}>Generalisation</Heading>
-        </Slide>
-        <Slide bgImage={images.drawing}>
-          <Heading size={3} padding="30px">
-            <Link href="../awayjs-examples-bin/AWDBasicTests.html">Drawing API</Link>
-          </Heading>
-        </Slide>
-        <Slide>
-          <Image src={images.sunflower} height="200px" padding="20px"/>
-          <Layout>
-            <Link href="../sprint_5/Mo.html" margin="30px"><Image src={images.sunflower_screenshot1} height="200px"/></Link>
-            <Link href="../sprint_5/Fo.html" margin="30px"><Image src={images.sunflower_screenshot2} height="200px"/></Link>
-            <Link href="../sprint_5/So.html" margin="30px"><Image src={images.sunflower_screenshot3} height="200px"/></Link>
-          </Layout>
-          <Heading size={3} padding="20px">
-            <Link href="https://www.sunflowerlearning.com">http://www.sunflowerlearning.com/</Link>
-          </Heading>
-        </Slide>
-        <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Notes>
-            <h4>Speed improvements to download and runtime</h4>
-            <ol>
-              <li>Tesslation on the fly</li>
-              <li>Dynamic caching of shapes &amp; fonts</li>
-            </ol>
-          </Notes>
-          <Heading size={1}>Optimisation</Heading>
-        </Slide>
-        <Slide bgImage={images.shumway}>
-        </Slide>
-        <Slide>
-          <Image src={images.mathswhizz} height="300px" padding="20px"/>
-          <Layout>
-            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=1" margin="30px"><Image src={images.mathswhizz_screenshot1} height="200px"/></Link>
-            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=5" margin="30px"><Image src={images.mathswhizz_screenshot2} height="200px"/></Link>
-            <Link href="../mw_swf_bin/tests.html?folder=MWFirst10lessons&swf=8" margin="30px"><Image src={images.mathswhizz_screenshot3} height="200px"/></Link>
-          </Layout>
-          <Heading size={3} padding="20px">
-            <Link href="https://www.whizz.com">http://www.whizz.com</Link>
-          </Heading>
-        </Slide>
-        <Slide bgDarken='0.7'  bgImage={images.nyan}>
-          <Notes>
-            <h4>AwayJS application focus</h4>
-            <ol>
-              <li>WebVR content with AwayJS interfaces</li>
-              <li>Abstracting an SVG loader</li>
-            </ol>
-          </Notes>
-          <Heading size={1}>Future</Heading>
-        </Slide>
-        <Slide bgImage={images.vr_headset}>
-        </Slide>
-        <Slide bgImage={images.svg_lotr}>
-        </Slide> */}
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Heading size={1}>Thank you</Heading>
           <Heading size={3} padding="20px">

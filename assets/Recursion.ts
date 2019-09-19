@@ -1,5 +1,5 @@
-var x = 0, t = 20;
+var x = 0, i = 0, t = 20;
 
-while (t--) {
-  console.log(x = (x + 2));
+while (i < t) {
+  console.log(++i, x = x + 2);
 }
