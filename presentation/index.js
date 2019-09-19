@@ -247,6 +247,7 @@ export default class Presentation extends React.Component {
             <ol>
               <li>4 rules, but I like the visual simplicity of these 8 tests</li>
               <li>The calculation is performed on every square on every frame, in parallel</li>
+              <li>Otherwise known as a convolution filter</li>
             </ol>
           </Notes>
           <Heading top size={1}>Conway's<br /> Game Of Life</Heading>
@@ -257,8 +258,8 @@ export default class Presentation extends React.Component {
           <Layout>
             <Image src={images.gol.block} height="250px" padding="10px"/>
             <Image src={images.gol.boat} height="250px" padding="10px"/>
-            <Image src={images.gol.boat} height="250px" padding="10px"/>
-            <Image src={images.gol.boat} height="250px" padding="10px"/>      
+            <Image src={images.gol.beehive} height="250px" padding="10px"/>
+            <Image src={images.gol.loaf} height="250px" padding="10px"/>      
           </Layout>
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
