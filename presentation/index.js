@@ -129,7 +129,7 @@ export default class Presentation extends React.Component {
            <h4>Introduction</h4>
           <ol>
             <li>Open source work at the Away Foundation</li>
-            <li>Geometric maths a bit of a hobby</li>
+            <li>Visual mathematics a bit of a hobby</li>
           </ol>
           </Notes>
           <Heading size={1} fit>Lets Recurse!</Heading>
@@ -160,7 +160,7 @@ export default class Presentation extends React.Component {
               { loc: [0, 572], title: "Javascript" }
             ]}>
           <Notes>
-           <h4>Although this is probably more familiar. What were we thinking?</h4>
+           <h4>Although this is a javascript conf. What were we thinking?</h4>
           </Notes>
         </CodeSlide>
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
@@ -176,6 +176,7 @@ export default class Presentation extends React.Component {
             <ol>
               <li>Can be <b>Arithmetic</b> (plus / minus)</li>
               <li>Or <b>Geometric</b> (mutiply / divide)</li>
+              <li>We can truncate the output to capture all results for a given calculation</li>
             </ol>
           </Notes>
         </CodeSlide>
@@ -188,12 +189,15 @@ export default class Presentation extends React.Component {
               { loc: [0, 572], title: "Times Table" }
             ]}>
           <Notes>
-            <h4>We can generalise to capture all results in a set.</h4>
+            <h4>Here is the generalisation written out again in case i forgot how to code</h4>
           </Notes>
         </CodeSlide>
         <Slide bgDarken='0.3' bgImage={images.mario}>
           <Notes>
             <h4>But why is this interesting?</h4>
+            <ol>
+              <li>Answer - Emergence! (minus sound effects)</li>
+            </ol>
           </Notes>
           <Heading top size={1}>Emergence!</Heading>
         </Slide>
@@ -232,7 +236,6 @@ export default class Presentation extends React.Component {
           <Notes>
             <h4>Evolving patterns can be useful for creating orgainic looking visuals</h4>
             <ol>
-              <li>I searached for "tree fractal", and this showed up</li>
               <li>All credit to fellow southerner Cyriak</li>
             </ol>
           </Notes>
@@ -287,7 +290,7 @@ export default class Presentation extends React.Component {
         </Slide> */}
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
-            <h4>Assembly has a nice version that benefits from the performance advantage of Webassembly</h4>
+            <h4>AssemblyScript has a nice version that benefits from the performance advantage of Webassembly</h4>
             <ol>
               <li>A random setup of active and inactive squares quickly evolves</li>
               <li>Clicking activates more squares!</li>
@@ -306,8 +309,7 @@ export default class Presentation extends React.Component {
           <Notes>
             <h4>Benefit from many supergeek nordic minds</h4>
             <ol>
-              <li>Competitions are often restricted by size (64k) or platform</li>
-              <li>Frequently employ bounded iterative routines to produce interesting pseudo-random outputs</li>
+              <li>Bacground is 4k intro by Inigo Quilez</li>
             </ol>
           </Notes>
           <Heading size={1}>Demoscene</Heading>
@@ -315,12 +317,13 @@ export default class Presentation extends React.Component {
         <Slide bgImage={images.collage} >
           <Notes>
             <h4>Older work can't get enough of that cyberpunk look</h4>
+            <ol>
+              <li>Competitions are often restricted by size (64k) or platform</li>
+              <li>Frequently employ bounded iterative routines to produce interesting pseudo-random outputs</li>
+            </ol>
           </Notes>
         </Slide>
         <Slide bgDarken='0.5' bgImage={images.collage} >
-          <Notes>
-            <h4>Older work can't get enough of that cyberpunk look</h4>
-          </Notes>
           <Heading size={1}>http://www.pouet.net</Heading>
         </Slide>
         {/* <Slide bgDarken='0.7' bgImage={images.infinite_plane} >
@@ -351,6 +354,10 @@ export default class Presentation extends React.Component {
             ]}>
           <Notes>
             <h4>A <b>Quadratic</b> progression uses a quadratic formula</h4>
+            <ol>
+              <li>Looks like it will always explode to Infinity, right?</li>
+              <li>What about if x is less than 1?</li>
+            </ol>
           </Notes>
         </CodeSlide>
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
@@ -364,8 +371,9 @@ export default class Presentation extends React.Component {
           <Notes>
             <h4>A <b>Complex Quadratic</b> just has complex numbers in place of regular numbers</h4>
             <ol>
-              <li>{'x is replaced by {x,y}'}</li>
-              <li>{'c is replaced by {cx, cy}'}</li>
+              <li>Ok, that last sentence made no sense</li>
+              <li>Try {'x is replaced by {x,y}'}</li>
+              <li>And {'c is replaced by {cx, cy}'}</li>
             </ol>
           </Notes>
         </CodeSlide>
@@ -378,16 +386,34 @@ export default class Presentation extends React.Component {
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
             <h4>Its not doing much, perhaps use an interactive result to explore?</h4>
+            <ol>
+              <li>Calculation is made for every pixel to produce the Mandelbrot set</li>
+              <li>The more iterations you perfom, the more detailed the pattern gets</li>
+            </ol>
           </Notes>
           <Image src={images.complex_quad_prog1} height="720px" padding="10px" />
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane} >
+          <Notes>
+            <h4>Now to really explode your head</h4>
+            <ol>
+              <li>A Mandelbulb is 'just' a Mandelbrot in 3 dimensions</li>
+              <li>The more iterations you perfom, the more detailed the pattern gets</li>
+            </ol>
+          </Notes>
           <video id="background-video" controls autoPlay muted>
             <source src={images.like_a_dream} type="video/mp4" />
           </video>
-          <Heading size={3} padding="20px">Mandelbulb</Heading>
+          <Heading size={3} padding="20px">BIB - Like in a Dream (Mandelbulb)</Heading>
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.frax} >
+          <Notes>
+            <h4>Have to mention the work of a fellow ex-physicist</h4>
+            <ol>
+              <li>Creator of Frax, the fractal explorer for your iDevice</li>
+              <li>Visuals that no sane designer would ever want to create by hand</li>
+            </ol>
+          </Notes>
           <Heading size={1}>Tom Beddard</Heading>
           <Heading size={3}>
             <Link href="http://sub.blue">
@@ -403,7 +429,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgDarken='0.5' bgImage={images.c3po_revenge} >
           <Notes>
-            <h4>Log tables for computers</h4>
+            <h4>At least i got my star wars reference in</h4>
             <ol>
               <li>Pre-calculates values</li>
               <li>Uses results for fast lookups at runtime</li>
@@ -413,7 +439,11 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
-            <h4>Precalculated values helped speed up calculations</h4>
+            <h4>Can be thought of as Log Tables for computers</h4>
+            <ol>
+              <li>Pre-calculates values</li>
+              <li>Uses results for fast lookups at runtime</li>
+            </ol>
           </Notes>
           <Image src={images.log_table} height="720px" padding="10px" />
         </Slide>
@@ -427,14 +457,18 @@ export default class Presentation extends React.Component {
             ]}>
           <Notes>
             <h4>In order to avoid long division / multiplation, use log tables! (or a calculator)</h4>
+            <ol>
+              <li>But in this case, we know how to caclulate logs</li>
+            </ol>
           </Notes>
         </CodeSlide>
         <Slide bgImage={images.neuralnetwork}>
           <Notes>
             <h4>What do we do when the actual calculation is unknown?</h4>
             <ol>
-              <li>Set up an initial condition</li>
-              <li>Use recursion to find the optimial solution</li>
+              <li>Typical neural network has several 'hidden' layers of nodes</li>
+              <li>Every node in every layer is connected to every node in the following/preceeding layer with some bias</li>
+              <li>A trained network has the biases adjusted to produce sensible outputs</li>
             </ol>
           </Notes>
         </Slide>
@@ -446,7 +480,13 @@ export default class Presentation extends React.Component {
             ranges={[
               { loc: [0, 572], title: "Gradient Descent" }
             ]}>
-
+          <Notes>
+            <h4>This is absolutely not how modern algorithms work, but it gives us the general principal</h4>
+            <ol>
+              <li>Set up an initial condition</li>
+              <li>Use recursion to find the optimial solution</li>
+            </ol>
+          </Notes>
         </CodeSlide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
@@ -470,7 +510,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
           <Notes>
-            <h4></h4>
+            <h4>Ai-JS is a great resource for getting started with machine learning</h4>
           </Notes>
           <Image src={images.aijs_logo} height="400px" padding="10px" />
           <Heading size={3} padding="20px">
