@@ -103,6 +103,7 @@ const images = {
   how_machines_learn: require('../assets/how_machines_learn.jpg'),
   neural_simulation_video: require('../assets/Neural Network 3D Simulation.mp4'),
   aijs_logo: require('../assets/aijs-logo.png'),
+  sinpic: require('../assets/sinpic.png'),
 };
 
 const fullScreenSlide = {
@@ -339,10 +340,10 @@ export default class Presentation extends React.Component {
             lang="typescript"
             code={require("raw-loader!../assets/Progression.ts")}
             ranges={[
-              { loc: [0, 572], title: "Progression" }
+              { loc: [0, 572], title: "Arithmetic" }
             ]}>
           <Notes>
-            <h4>We have to go back to our progression</h4>
+            <h4>We have to go back to our <b>Arithmetic</b> progression, and look at some different types</h4>
           </Notes>
         </CodeSlide>
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
@@ -470,8 +471,16 @@ export default class Presentation extends React.Component {
               <li>Typical neural network has several 'hidden' layers of nodes</li>
               <li>Every node in every layer is connected to every node in the following/preceeding layer with some bias</li>
               <li>A trained network has the biases adjusted to produce sensible outputs</li>
+              <li>Example here uses the MNIST data set</li>
             </ol>
           </Notes>
+        </Slide>
+        <Slide bgDarken='0.7' bgImage={images.infinite_plane}>
+          <Notes>
+            <h4>Lets assume our cost function is a sin wave, and we are interested in the local maximum at PI/2</h4>
+          </Notes>
+          <Image src={images.sinpic} height="720px" padding="10px" />
+          <Heading size={3}>Walking the cost function</Heading>
         </Slide>
         <CodeSlide bgDarken='0.7' bgImage={images.infinite_plane} textSize="50" 
             showLineNumbers={false}

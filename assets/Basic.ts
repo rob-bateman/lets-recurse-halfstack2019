@@ -1,2 +1,2 @@
-10 PRINT "Hello Vienna"
+10 PRINT "Hello London"
 20 GOTO 10
