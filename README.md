@@ -23,5 +23,8 @@ Demoscene
 
  Machine Learning
   - [The MNIST data set](https://en.wikipedia.org/wiki/MNIST_database)
+  - [3Blue1Brown - But what is a Neural Network?](https://www.youtube.com/watch?v=aircAruvnKk)
+  - [CGP Grey - How Machines *Really* Learn.](https://www.youtube.com/watch?v=wvWpdrfoEv0)
+  - [3Blue1Brown - Gradient descent, how neural networks learn](https://www.youtube.com/watch?v=IHZwWFHWa-w)
   - [Neural Network Simulation (Cybercontrols Perceptron)](https://www.youtube.com/watch?v=3JQ3hYko51Y)
   - [https://aijs.rocks](https://aijs.rocks)
